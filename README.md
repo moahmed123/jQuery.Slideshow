@@ -11,23 +11,30 @@ Reference the `slideShow()
 
 **HTML**
 ```html
-<!-- SlideShow -->
-<ul class="slider">
-	<li class="active">
-		<img src="image/img-1.jpg">
-	</li>
-	<li>
-		<img src="image/img-2.jpg">
-	</li>
-	<li>
-		<img src="image/img-3.jpg">
-	</li>
-	<li>
-		<img src="image/img-4.jpg">
-	</li>
-</ul>
-<a id ='next'> next</a>
-<a id ='prev'> prev</a>
+<div class="container-slider">
+    <!-- Slider -->    
+    <a id ='prev' class="prev-icon">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </a>
+    <ul class="slider">
+      <li class="active">
+            <img src="image/img-1.jpg">
+      </li>
+      <li>
+            <img src="image/img-2.jpg">
+      </li>
+      <li>
+            <img src="image/img-3.jpg">
+      </li>
+      <li>
+            <img src="image/img-4.jpg">
+      </li>
+    </ul>
+    <a id ='next' class="next-icon">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </a>                    
+    <!-- End Slider -->
+</div>    
 ```
 
 **jQuery**
