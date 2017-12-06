@@ -8,23 +8,21 @@
     Author Gmail       : mohamedalaaabas93@gmail.com 
     GitHub Account     : https://github.com/moahmed123
     version For Plugin : 1.0.1 v
-*/    
-(function ( $ ) {
-	
-	$.fn.slideShow = function(speed){
+*/
+(function ($) {
+    'use strict';
+    $.fn.slideShow = function (speed) {
 		var slider         = this,
-	    	lengthDiv      = slider.children().length,        
-	    	childernForDiv = slider.children(),
-	    	show;
-	    	console.log(lengthDiv);
-	   
-	    $('#next').on('click', function () {
-	    	StopSlidShow();        	
-	    	var activeClass    = $('.slider .active');
-	    	nextSlider(activeClass) ; 	
-	    });
-	    
-	    $('#prev').on('click', function () {
+            lengthDiv      = slider.children().length,
+            childernForDiv = slider.children(),
+            show,
+            speeduser   = speed + 10000; // By Default 10000
+        $('#next').on('click', function () {
+            StopSlidShow();
+            var activeClass    = $('.slider .active');
+            nextSlider(activeClass);
+        });
+        $('#prev').on('click', function () {
 	    	StopSlidShow();   // stop Slide Show       	
 	    	var activeClass    = $('.slider .active');        	
 	    	prevSlider(activeClass);        	
@@ -62,7 +60,7 @@
 	    	clearInterval(show);
 	    }
 	    function startSlidShow(){
-	    	show = setInterval(SlideShow, speed);
+	    	show = setInterval(SlideShow, speeduser);
 	    }		
 	    //show = setInterval(SlideShow, speed);
 	};

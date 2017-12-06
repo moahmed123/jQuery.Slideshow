@@ -1,6 +1,84 @@
-.slider{
-	width: 600px;
-    height: 300px;
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.name-author,
+.name-author:hover{
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    color: #fff;
+    letter-spacing: 1.8px;
+}
+.homepage{
+    width: 100%;
+    height: 100%;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+    background: #41295a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.homepage .container {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.homepage .row.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+h1{
+    font-size: 115px;
+    font-weight: normal;
+    letter-spacing: 10px;
+    padding-top: 0;
+    font-family: 'Monoton', cursive;
+}
+
+/*Section Slider */
+.slider-sec{
+    padding: 100px 0;
+}
+.slider-sec .container-slider{
+    position: relative;
+}
+.prev-icon,
+.next-icon{
+    position: absolute;
+    z-index: 2222;
+    color: #fff;
+    width: 13%;
+    height: 100%;
+    background: rgba(68, 68, 68, 0.18823529411764706);
+    text-align: center;
+    padding-top: 20%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.prev-icon:hover,
+.next-icon:hover{
+    color: #fff;
+}
+.next-icon{
+    right: 0;
+    top: 0;
+}
+.prev-icon i,
+.next-icon i{
+    font-size: 70px;
+}
+.slider-sec .container-slider:hover .next-icon,
+.slider-sec .container-slider:hover .prev-icon{
+    opacity: .6;
+    transition: all .5s ease-in-out;
+}
+.slider{	
+    height: 550px;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
