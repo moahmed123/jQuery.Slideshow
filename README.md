@@ -13,18 +13,18 @@ Reference the `slideShow()
 ```html
 <!-- SlideShow -->
 <ul class="slider">
-<li class="active">
-<img src="image/img-1.jpg">
-</li>
-<li>
-<img src="image/img-2.jpg">
-</li>
-<li>
-<img src="image/img-3.jpg">
-</li>
-<li>
-<img src="image/img-4.jpg">
-</li>
+	<li class="active">
+		<img src="image/img-1.jpg">
+	</li>
+	<li>
+		<img src="image/img-2.jpg">
+	</li>
+	<li>
+		<img src="image/img-3.jpg">
+	</li>
+	<li>
+		<img src="image/img-4.jpg">
+	</li>
 </ul>
 <a id ='next'> next</a>
 <a id ='prev'> prev</a>
@@ -52,4 +52,4 @@ $(function() {
   
 
 ## Feedback
-If you discover any issues or have questions regarding usage, please send a message to [Gmail](mohamedalaaabas93@gmail.com ) or find me on GitHub [@moahmed123](https://github.com/moahmed123).
+If you discover any issues or have questions regarding usage, please send a message to [ThemeForest](https://themeforest.net/user/m_alaa/portfolio?ref=M_Alaa) or find me on GitHub [@moahmed123](https://github.com/moahmed123).
