@@ -4,7 +4,7 @@ Simple jQuery slideShow.
 ## Installation
 Include the latest version of [jQuery](http://jquery.com/download) :
 ```html
-<script src="jQuery.min.js"></script>  
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>  
 ```
 ## How to Use
 Reference the `slideShow()
@@ -41,17 +41,19 @@ Reference the `slideShow()
 ```javascript
 $(function() {  
 
-    $('.slider').slideShow(3500); 
-    
+	// To Start Slideshow .
+    $('.slider').slideShow('start',1500); 
+    // To Stop Slideshow .
+    $('.slider').slideShow('stop',500);     
 });
 ```  
 
 ## Browser Support
 – Google Chrome  
-– Safari ( Desktop & Mobile )  
-– Internet Explorer ( 8, 9, 10+ )  
+– Safari   
+– Internet Explorer ( 8, 9, 10+ ) ( Not Tested )  
 – Firefox  
-– Opera ( Not Tested )  
+– Opera   
 
 ## Release Notes
 **jQuery.slideShow 1.0.1**   
