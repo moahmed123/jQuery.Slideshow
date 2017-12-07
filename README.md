@@ -40,11 +40,10 @@ Reference the `slideShow()
 **jQuery**
 ```javascript
 $(function() {  
-
-	// To Start Slideshow .
+    // To Start Slideshow .
     $('.slider').slideShow('start',1500); 
     // To Stop Slideshow .
-    $('.slider').slideShow('stop',500);     
+    $('.slider').slideShow('stop');
 });
 ```  
 
