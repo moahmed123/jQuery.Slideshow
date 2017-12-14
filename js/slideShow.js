@@ -15,8 +15,8 @@
 		var slider         = this,
             lengthDiv      = slider.children().length,
             childernForDiv = slider.children(),
-            clickToNext    = $('.click-next'),
-            clickToPrev    = $('.click-prev'),
+            clickToNext    = $(slider.selector).prev(),
+            clickToPrev    = $(slider.selector).next(),
             show,
             StopSlidShow,
             nextSlider,
@@ -30,6 +30,7 @@
 				checkslide : 'start', // Check For plugin Start Or Stop 
 				speed      : 2000  // Check For plugin Speed 
 			},options);     
+        console.log(clickToNext.next());
 			   
         clickToNext.on('click', function () {        	
             StopSlidShow(); // To Stop Slide Infinite  When Click To Prev Or Next .
