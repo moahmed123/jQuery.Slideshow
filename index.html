@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="container-slider">
                     <!-- Slider -->    
-                    <a id ='prev' class="prev-icon">
+                    <a class="prev-icon click-prev">
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                     </a>
                     <ul class="slider">
@@ -65,7 +65,7 @@
                             <img src="image/img-4.jpg">
                       </li>
                     </ul>
-                    <a id ='next' class="next-icon">
+                    <a class="next-icon click-next">
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>                    
                     <!-- End Slider -->
@@ -73,7 +73,36 @@
             </div>  
         </div>
       </section>      
-      
+         <section class="slider-sec">
+        <div class="container">
+            <div class="row">
+                <div class="container-slider slider-two">
+                    <!-- Slider -->    
+                    <a class="prev-icon click-prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                    <ul class="slider2">
+                      <li class="active">
+                            <img src="image/img-1.jpg">
+                      </li>
+                      <li>
+                            <img src="image/img-2.jpg">
+                      </li>
+                      <li>
+                            <img src="image/img-3.jpg">
+                      </li>
+                      <li>
+                            <img src="image/img-4.jpg">
+                      </li>
+                    </ul>
+                    <a class="next-icon click-next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>                    
+                    <!-- End Slider -->
+                </div>    
+            </div>  
+        </div>
+      </section> 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -81,11 +110,13 @@
     <script src="js/bootstrap.min.js"></script>     
     <script src="js/slideShow.js"></script>
     <script>
-    //$('.slider').slideShow();
-    	$('.slider').slideShow({    	
-    		checkslide: 'start', 
-    		speed: 4000	
-    	});  
+    $('.slider2').slideShow({
+    	checkslide: 'stop'
+    });
+	$('.slider').slideShow({    	
+		checkslide: 'start', 
+		speed: 8000	
+	});  
     	      		  
     </script>     
   </body>
