@@ -28,7 +28,7 @@
             // Default Of Start Plugin .            
 			setting       = $.extend({
 				checkslide : 'start', // Check For plugin Start Or Stop 
-				speed      : 500  // Check For plugin Speed 
+				speed      : 2000  // Check For plugin Speed 
 			},options);     
 			   
         clickToNext.on('click', function () {        	
