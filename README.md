@@ -65,9 +65,11 @@ $(function() {
 
 ## Release Notes
 **jQuery.slideShow 1.7.5**
-–  Active With keyboard :) .  
+–  Active With keyboard :) . 
+
 **jQuery.slideShow 1.5.0**
-– option For Plugin . 
+– option For Plugin .
+
 **jQuery.slideShow 1.0.1**   
 – Initial Release   
   
