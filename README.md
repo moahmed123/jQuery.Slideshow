@@ -40,10 +40,19 @@ Reference the `slideShow()
 **jQuery**
 ```javascript
 $(function() {  
-    // To Start Slideshow .
-    $('.slider').slideShow('start',1500); 
+	// Start by Default 
+	$('.slider').slideShow(); // By Default start , speed :  2000
+	
+    // To Start Slideshow .    
+    $('.slider').slideShow({    	
+    		checkslide: 'start', // By Default start 
+    		speed: 4000  // By Default 2000 
+    });
+        
     // To Stop Slideshow .
-    $('.slider').slideShow('stop');
+    $('.slider').slideShow({    	
+    		checkslide: 'stop'    		
+    });
 });
 ```  
 

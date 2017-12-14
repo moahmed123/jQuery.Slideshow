@@ -7,11 +7,11 @@
     Author Email       : mohamed_ll14@yahoo.com
     Author Gmail       : mohamedalaaabas93@gmail.com 
     GitHub Account     : https://github.com/moahmed123
-    version For Plugin : 1.0.2 v
+    version For Plugin : 1.1.0 v
 */
 (function ($) {
     'use strict';
-    $.fn.slideShow = function (checkslide, speed) {
+    $.fn.slideShow = function (options) {
 		var slider         = this,
             lengthDiv      = slider.children().length,
             childernForDiv = slider.children(),
@@ -22,7 +22,14 @@
             checkslider,
             SlideShowInfinite,
             startSlidShow,
-            speeduser   = speed + 10000; // By Default 10000
+            activeSlideShow  = $('.slider .active'),
+            // Default Of Start Plugin .            
+			setting       = $.extend({
+				checkslide : 'start', // Check For plugin Start Or Stop 
+				speed      : 2000  // Check For plugin Speed 
+			},options);     
+			   
+            console.log(setting.checkslide + " && " + setting.speed);
             
         $('#next').on('click', function () {
             StopSlidShow();
@@ -37,11 +44,12 @@
 	    	    
 	    $('#next, #prev').on('mouseleave', function () {
             setTimeout(function () {
-                checkslider(checkslide, speeduser); // check For sTop Slider Or Start .    
+               checkslider(setting.checkslide, setting.speed); // check For sTop Slider Or Start .    
             },3000);            
 	    });
-        // Run Slider To Show 
-	    checkslider(checkslide, speeduser);
+        // Run Slider To Show
+        activeSlideShow.next().addClass('next'); 
+	    checkslider(setting.checkslide, setting.speed);
 	    /*************************
 	     ** All Function To Use ** 
 	     ** 
@@ -70,23 +78,22 @@
             }
         }
         
-        function SlideShowInfinite() {
-            $('.slider .active').toggleClass('active old-slide');
-            var oldClass = $('.slider .old-slide');
-            
-            oldClass.next().addClass('active');
-            
-            oldClass.removeClass('old-slide');
-            
+        function SlideShowInfinite() {        	        	        
+        	$('.slider').children().removeClass('active');
+        	$('.slider .next').addClass('active').removeClass('next');
+        	$('.slider .active').next().addClass('next');
+        	        	        	
             if ($('.slider .active').next().length === 0 && $('.slider .active').length === 0) {
-                slider.children().first().addClass('active');
+            	slider.children().first().addClass('active');
+            	slider.children().first().next().addClass('next');
             }            
         }
         // Check To Slider Stop Or Start .
         function checkslider(checkslide, speeduser) {
             if (checkslide !== 'stop') {
+            	var speedUserAppend = speeduser + 100 ;
                 // Start SlideShow
-                startSlidShow(speeduser); // Perant To Start Slide Show When Loading Page .	
+                startSlidShow(speedUserAppend); // Perant To Start Slide Show When Loading Page .	
 		    } else {
                 // Stop Slideshow
                 StopSlidShow();   // stop Slide Sho

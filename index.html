@@ -79,10 +79,14 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>     
-    <script src="js/slider.js"></script>
+    <script src="js/slideShow.js"></script>
     <script>
-    	$('.slider').slideShow('start',500);    
-    		  
+    //$('.slider').slideShow();
+    	$('.slider').slideShow({    	
+    		checkslide: 'start', 
+    		speed: 4000	
+    	});  
+    	      		  
     </script>     
   </body>
 </html>
