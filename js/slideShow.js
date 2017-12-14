@@ -50,6 +50,9 @@
         // Run Slider To Show
         activeSlideShow.next().addClass('next'); 
 	    checkslider(setting.checkslide, setting.speed);
+	    
+		   document.onkeydown = checkKey;
+			
 	    /*************************
 	     ** All Function To Use ** 
 	     ** ==(Fun)== nextSlider(activeClass) .
@@ -125,5 +128,28 @@
 	    function startSlidShow(speedUserSet) {
             show = setInterval(SlideShowInfinite, speedUserSet);
         }
+        
+        /*
+	     ** up arrow    == '38'
+	     ** down arrow  == '40'  
+	     ** left arrow  == '37'    
+	     ** right arrow == '39'    
+         */
+        // Function when key Left and right arrow .
+        function checkKey(e) {			
+			    e = e || window.event;
+			    if (e.keyCode == '37') {
+			       // left arrow
+			       StopSlidShow(); // To Stop Slide Infinite When Click To Prev Or Next .
+            	   var activeClass  = $(slider.selector + ' .active');
+            	   prevSlider(activeClass);  // Call Function  PrevSlider .
+			    }			    			    
+			    else if (e.keyCode == '39') {
+			       StopSlidShow(); // To Stop Slide Infinite  When Click To Prev Or Next .
+            	   var activeClass    = $(slider.selector + ' .active'); // Cached Class Active .
+            	   nextSlider(activeClass); // Call Function  NextSlider .
+			       // right arrow
+			    }			
+			}
     };
 }(jQuery));
