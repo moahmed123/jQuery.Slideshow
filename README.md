@@ -64,6 +64,8 @@ $(function() {
 – Opera   
 
 ## Release Notes
+**jQuery.slideShow 1.7.5** // Active With keyboard :) 
+**jQuery.slideShow 1.5.0**
 **jQuery.slideShow 1.0.1**   
 – Initial Release   
   
